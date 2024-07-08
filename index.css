@@ -143,28 +143,61 @@ p {
 .previous-work h2 {
     font-size: 5rem;
     margin-bottom: 50px;
+    margin-left: 100px;
 }
 
 .work-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    padding: 0 100px;
 }
 
 .work-item {
-    position: relative;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
 }
 
-.work-item img {
+.work-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.work-image img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    object-fit: cover;
 }
 
-.work-item p {
+.work-info {
+    padding: 20px;
+    background-color: #f0f0f0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.work-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.work-info a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    align-self: flex-start;
     margin-top: 10px;
-    font-size: 0.9rem;
-    color: #666;
+}
+
+.work-info a:hover {
+    text-decoration: underline;
 }
 
 /* Contact Section */
@@ -174,21 +207,25 @@ p {
     padding: 100px 0;
     position: relative;
     overflow: hidden;
+    
 }
 
 .contact-content {
     display: flex;
     justify-content: space-between;
+    margin-left: 100px;
 }
 
 .contact-left {
     flex: 1;
     padding-right: 50px;
+    margin-left: 100px;
 }
 
 .contact-right {
     flex: 1;
     position: relative;
+    margin-left: 100px;
 }
 
 .contact h2 {
@@ -233,7 +270,16 @@ p {
     opacity: 0.7;
 }
 
-/* Responsive Design */
+.work-info a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+    .work-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     h1 {
         font-size: 3rem;
@@ -254,6 +300,15 @@ p {
 
     .work-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .previous-work h2 {
+        font-size: 3rem;
+        margin-left: 20px;
+    }
+    
+    .work-grid {
+        padding: 0 20px;
     }
 
     .contact-left {
