@@ -1,0 +1,271 @@
+/* CSS ファイル (styles.css) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=Cormorant+Garamond:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Serif JP', serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero Section の更新 */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* 波のスタイル */
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 1;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 150px;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.work-with-me {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    padding: 100px 0;
+}
+
+.about-image {
+    flex: 1;
+    padding-right: 50px;
+    max-width: 400px; /* 画像のサイズを調整 */
+    margin-right: 30px;
+    margin-left: 100px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    
+}
+
+.about-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    line-height: 1;
+}
+
+p {
+    font-size: 1.1rem;
+    max-width: 600px;
+}
+
+/* Previous Work Section */
+.previous-work {
+    padding: 100px 0;
+    background-color: #f9f9f9;
+}
+
+.previous-work h2 {
+    font-size: 5rem;
+    margin-bottom: 50px;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.work-item {
+    position: relative;
+}
+
+.work-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.work-item p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #000;
+    color: #fff;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-left {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.contact-right {
+    flex: 1;
+    position: relative;
+}
+
+.contact h2 {
+    font-size: 5rem;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.contact-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+}
+
+.open-for-collabs {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.contact-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photographer-name {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .about, .contact-content {
+        flex-direction: column;
+    }
+
+    .about-image {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-left {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .contact-right {
+        height: 300px;
+    }
+    
+    .wave svg {
+        height: 100px;
+    }
+}
