@@ -207,25 +207,29 @@ p {
     padding: 100px 0;
     position: relative;
     overflow: hidden;
+    margin: 0 -50vw; /* ネガティブマージンで画面幅いっぱいに */
+    width: 100vw; /* ビューポート幅いっぱい */
+    left: 50%; /* 中央揃え */
+    right: 50%; /* 中央揃え */
     
 }
 
 .contact-content {
     display: flex;
     justify-content: space-between;
-    margin-left: 100px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .contact-left {
     flex: 1;
     padding-right: 50px;
-    margin-left: 100px;
 }
 
 .contact-right {
     flex: 1;
     position: relative;
-    margin-left: 100px;
 }
 
 .contact h2 {
