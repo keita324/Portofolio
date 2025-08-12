@@ -643,17 +643,6 @@
               pdf_link: "#"
           },
 
-          taskmanager: {
-              title: "タスク管理システム",
-              image: "img/task.png",
-              description: "チーム向けのタスク管理・プロジェクト管理システム",
-              motivation: "効率的なプロジェクト管理の重要性を実感し、チームでのタスク共有と進捗管理を円滑にするシステムを開発しました。直感的な操作性と視覚的な分かりやすさを重視した設計を心がけました。",
-              technical: "フロントエンドはVue.jsで構築し、バックエンドはLaravelを使用。データベースにはMySQLを採用し、認証システムにはJWT（JSON Web Token）を実装。ドラッグ&ドロップでのタスク移動機能や、リアルタイム通知機能も実装しました。",
-              outcome: "カンバン方式でのタスク管理、チームメンバーへのタスク割り当て、期限管理、進捗の可視化などの機能を実装。チームの生産性向上に貢献できるシステムを構築できました。",
-              tech_stack: ["Vue.js", "Laravel", "MySQL", "JWT", "Vuex", "Bootstrap"],
-              github: "https://github.com/keita324/task-management-system"
-          },
-
           learning_app: {
               title: "楽しく学べる学習管理アプリ（DMM WEBCAMP）",
               image: "img/learning_app.png",
@@ -882,6 +871,35 @@
       <section class="previous-work" id="works">
         <h2>PREVIOUS<br>WORK</h2>
         <div class="work-grid">
+            <div class="work-item" onclick="openModal('cartpole')">
+                <div class="work-image">
+                    <img src="img/cartpole.png" alt="カートポール">
+                </div>
+                <div class="work-info">
+                    <h3>カートポールでのグループ学習検証</h3>
+                    <span class="view-more">詳細を見る</span>
+                </div>
+            </div>
+
+            <div class="work-item" onclick="openModal('cartpole_q')">
+                <div class="work-image">
+                    <img src="img/cartpole_q.png" alt="ヒートマップ">
+                </div>
+                <div class="work-info">
+                    <h3>グループ学習の報酬分析（国際学会版）</h3>
+                    <span class="view-more">詳細を見る</span>
+                </div>
+            </div>
+
+            <div class="work-item" onclick="openModal('learning_app')">
+                <div class="work-image">
+                    <img src="img/learning_app.png" alt="学習管理アプリ">
+                </div>
+                <div class="work-info">
+                    <h3>楽しく学べる学習管理アプリ（DMM WEBCAMP）</h3>
+                    <span class="view-more">詳細を見る</span>
+                </div>
+            </div>
             <div class="work-item" onclick="openModal('mario')">
                 <div class="work-image">
                     <img src="img/mario.png" alt="マリオAI">
@@ -938,37 +956,6 @@
                 </div>
                 <div class="work-info">
                     <h3>meshiterro(食事投稿サイト)</h3>
-                    <span class="view-more">詳細を見る</span>
-                </div>
-            </div>
-
-            <!-- 新しく追加する3つの作品 -->
-            <div class="work-item" onclick="openModal('cartpole')">
-                <div class="work-image">
-                    <img src="img/cartpole.png" alt="カートポール">
-                </div>
-                <div class="work-info">
-                    <h3>カートポールでのグループ学習検証</h3>
-                    <span class="view-more">詳細を見る</span>
-                </div>
-            </div>
-
-            <div class="work-item" onclick="openModal('cartpole_q')">
-                <div class="work-image">
-                    <img src="img/cartpole_q.png" alt="ヒートマップ">
-                </div>
-                <div class="work-info">
-                    <h3>グループ学習の報酬分析（国際学会版）</h3>
-                    <span class="view-more">詳細を見る</span>
-                </div>
-            </div>
-
-            <div class="work-item" onclick="openModal('learning_app')">
-                <div class="work-image">
-                    <img src="img/learning_app.png" alt="学習管理アプリ">
-                </div>
-                <div class="work-info">
-                    <h3>楽しく学べる学習管理アプリ（DMM WEBCAMP）</h3>
                     <span class="view-more">詳細を見る</span>
                 </div>
             </div>
