@@ -1,4 +1,611 @@
-<!DOCTYPE html>
+.project-header h2 {
+            font-size: 2.4rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .project-header img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .project-section {
+            margin-bottom: 30px;
+        }
+
+        .project-section h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .project-section p {
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* 研究論文専用スタイル */
+        .research-paper-section {
+            background: linear-gradient(135deg, #f6f9fc 0%, #e9f4ff 100%);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+
+        .research-paper-section h3 {
+            color: #2d3748;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .paper-info p {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .paper-info strong {
+            color: #2d3748;
+            font-weight: 600;
+        }
+
+        .pdf-actions {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .pdf-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white !important;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none !important;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .pdf-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        }
+
+        /* ハイライト表示 */
+        .highlights-grid {
+            display: grid;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px;
+            background: #f8fffe;
+            border-radius: 8px;
+            border-left: 3px solid #43e97b;
+        }
+
+        .highlight-icon {
+            color: #43e97b;
+            font-size: 1.1rem;
+            margin-top: 2px;
+        }
+
+        .highlight-item span:last-child {
+            color: #2d3748;
+            line-height: 1.5;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tech-tag {
+            background-color: #f0f0f0;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #333;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            background-color: #f0f0f0;
+            transition: background-color 0.3s ease;
+        }
+
+        .links a:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Contact */
+        .contact {
+            background-color: #000;
+            color: #fff;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .contact-left {
+            flex: 1;
+            padding-right: 50px;
+        }
+
+        .contact h2 {
+            font-size: 5rem;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-info p {
+            font-size: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .work-grid {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 0 50px;
+            }
+
+            .timeline-item {
+                flex: 0 0 350px;
+            }
+            
+            .timeline-arrow-line .line {
+                width: 70%;
+            }
+            
+            .timeline-arrow-line .arrow {
+                right: 14%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .about, .contact-content {
+                flex-direction: column;
+            }
+
+            .about-image {
+                padding-right: 0;
+                margin-bottom: 30px;
+                margin-left: 20px;
+            }
+
+            .work-grid {
+                grid-template-columns: 1fr;
+                padding: 0 20px;
+            }
+            
+            .previous-work h2 {
+                font-size: 3rem;
+                margin-left: 20px;
+            }
+
+            .contact-left {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+            
+            .wave svg {
+                height: 100px;
+            }
+
+            .timeline-track {
+                gap: 20px;
+                padding: 0 10px;
+            }
+
+            .timeline-item {
+                flex: 0 0 300px;
+            }
+
+            .timeline-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .timeline-content p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 3rem;
+            }
+            
+            .timeline-arrow-line .line {
+                width: 80%;
+            }
+            
+            .timeline-arrow-line .arrow {
+                right: 9%;
+            }
+
+            .timeline-images {
+                padding-left: 20px;
+            }
+
+            .image-large {
+                width: 160px;
+                height: 160px;
+            }
+
+            .image-small {
+                width: 80px;
+                height: 80px;
+                left: 180px;
+            }
+
+            .modal-content {
+                width: 95%;
+                margin: 10% auto;
+            }
+
+            .project-header h2 {
+                font-size: 2rem;
+            }
+
+            .project-header img {
+                height: 300px;
+            }
+        }
+    </style>
+
+    <script>
+        // プロジェクトデータ
+        const projectData = {
+            mario: {
+                title: "マリオAI(深層強化学習)",
+                image: "img/mario.png",
+                description: "深層強化学習を用いてスーパーマリオをプレイするAIを開発",
+                motivation: "ゲームAIの可能性を追求したいという思いから、まずは馴染みのあるマリオで強化学習に挑戦。プレイヤーの行動を学習させることで、人間らしい動きを実現することを目指しました。",
+                technical: "PyTorchを使用した深層強化学習モデルの実装。Environment設計からReward設計まで、様々な工夫を重ねました。特に、正確な状態認識のための画面処理や、効果的な報酬設計に注力しました。",
+                outcome: "ステージクリアまでの最適な行動を学習させることに成功。障害物の回避や適切なジャンプタイミングの習得など、人間らしいプレイスタイルを実現できました。",
+                tech_stack: ["Python", "PyTorch", "OpenAI Gym", "深層強化学習", "Computer Vision"],
+                github: "https://github.com/keita324/MarioAI/tree/main"
+            },
+
+            luigi: {
+                title: "ルイージAI(深層強化学習)",
+                image: "img/luigi.png",
+                description: "深層強化学習を用いてスーパーマリオをプレイするAIを開発",
+                motivation: "「人間は他者の行動を観察することで効率的に学習できる」という仮説のもと、AIでその検証を試みました。具体的には、実際にプレイするマリオAIと、その行動を観察するだけのルイージAIを作成し、協調学習の可能性を探究しています。",
+                technical: "PyTorchによる深層強化学習モデルを実装。特に注力した点は：\n・マリオの行動を正確に認識するための画面処理システム\n・観察学習を可能にする報酬設計\n・複数エージェント間での学習情報の共有機構など",
+                outcome: "マリオAIの単独学習では1000回の試行で到達できなかったステージを、ルイージAIとの協調により700回の試行でクリア達成\n・観察による学習が、試行錯誤による直接学習を補完できることを実証\n・この知見を人間の教育現場での「見て学ぶ」という学習手法の理論的裏付けとして活用することを検討中",
+                tech_stack: ["Python", "PyTorch", "OpenAI Gym", "深層強化学習", "Computer Vision"],
+                github: "※他研究室との共同研究のため、ソースコードは非公開"
+            },
+
+            car: {
+                title: "自動運転AI(深層強化学習)",
+                image: "img/car.png",
+                description: "人間の運転行動を模倣する自動運転AIの研究開発",
+                motivation: "自動運転技術の課題の一つに「乗客に優しい運転の実現」があります。既存の強化学習による自動運転AIは、目的地への到達は実現できても、急ブレーキや急カーブなど乗客に負担をかける運転になりがちでした。そこで、人間の運転行動を観察・模倣することで、より快適な運転の実現を目指しています。",
+                technical: "PyTorchによる深層強化学習モデルを実装。以下の点に特に注力しています：\n・人間の運転データからの効率的な学習メカニズム\n・乗り心地を考慮した報酬設計\n・加速度変化の最小化を考慮した行動決定機構\n・安全性と快適性のバランスを取る制御システム",
+                outcome: "Virtual Motorsport Labさまと共同研究を予定。VML自動運転ハッカソンにも出場しました。",
+                tech_stack: ["Python", "PyTorch", "深層強化学習", "模倣学習", "Computer Vision", "行動予測"],
+                github: "※企業との共同研究のため、ソースコードは非公開"
+            },
+
+            nagano: {
+                title: "ECサイト(スイーツ販売)",
+                image: "img/nagano.png",
+                description: "長野県の特産品を扱うECサイトの開発",
+                motivation: "実践的なWebアプリケーション開発の経験を積むため、実際のビジネスに近い形でのECサイト開発に挑戦しました。",
+                technical: "Ruby on Railsを使用したフルスタック開発。ユーザー管理、商品管理、注文処理など、ECサイトに必要な機能を実装。特に、カート機能やお気に入り機能の実装に工夫を凝らしました。",
+                outcome: "基本的なECサイトの機能を備えた完成度の高いサイトを構築。レスポンシブデザインにも対応し、使いやすいUIを実現しました。",
+                tech_stack: ["HTML/CSS", "Ruby on Rails", "Bootstrap","jQuery", "MySQL"],
+                github: "https://github.com/keita324/ECsite"
+            },
+
+            bookers: {
+                title: "Bookers(本のレビューサイト)",
+                image: "img/bookers2.jpg",
+                description: "本の感想を共有できるレビューサイト",
+                motivation: "読書好きのコミュニティを作りたいと考え、本の感想を気軽にシェアできるプラットフォームを開発しました。",
+                technical: "Ruby on Railsでの基本的なCRUD機能に加え、ユーザーフォロー機能やいいね機能を実装。また、非同期通信を活用して、スムーズな操作感を実現しました。",
+                outcome: "読書記録を簡単に管理でき、他のユーザーと感想を共有できるコミュニティサイトが完成しました。",
+                tech_stack: ["HTML/CSS", "Ruby on Rails", "jQuery", "Bootstrap"],
+                github: "https://github.com/keita324/bookers2-muro"
+            },
+
+            meshiterro: {
+                title: "meshiterro(食事投稿サイト)",
+                image: "img/meshittero.png",
+                description: "食事の写真と感想を共有できるSNSサイト",
+                motivation: "グルメ好きが気軽に情報交換できるプラットフォームを作りたいと考え、開発に着手しました。",
+                technical: "画像アップロード機能、位置情報の管理、タグ付け機能などを実装。また、検索機能を充実させ、ユーザーが求める情報に素早くアクセスできるようにしました。",
+                outcome: "食事の記録と共有が簡単にできるSNSサイトを構築。ユーザー同士のインタラクションを促進する機能も実装しました。",
+                tech_stack: ["HTML/CSS", "Ruby on Rails","Bootstrap"],
+                github: "https://github.com/keita324/meshiterro"
+            },
+
+            cartpole: {
+                title: "カートポールでのグループ学習検証",
+                image: "img/cartpole.png",
+                description: "人間のグループ学習を模した深層強化学習AIシステム",
+                motivation: "人間の協調学習からヒントを得て、計算能力の異なる複数のAIエージェントが協力することで、計算効率と学習性能の両立が可能になるという仮説を検証したいと考えました。限られたリソース環境での深層強化学習の適用範囲拡大を目指しています。",
+                technical: "PyTorchを使用した深層強化学習モデルを実装。隠れ層のニューロン数が異なる3つのエージェント（Agent64、Agent32、Agent16）を導入し、共有経験リプレイメモリと適応的エージェント選択機構を組み合わせたグループ学習システムを構築しました。",
+                outcome: "OpenAI GymのCartPole環境での実験において、特に低性能エージェント（Agent16）が個別学習時の93.3ステップから、グループ学習により184.4ステップへと約2倍の性能向上を実現。高性能エージェントの性能を阻害することなく、相乗効果を確認できました。",
+                highlights: [
+                    "Agent16の性能向上：93.3 → 184.4ステップ（約2倍改善）",
+                    "高性能エージェントの性能維持（Agent64: 200ステップ維持）",
+                    "共有経験リプレイメモリによる効率的な知識共有",
+                    "適応的エージェント選択による最適な協調学習"
+                ],
+                research_info: {
+                    conference: "大阪公立大学大学院 研究発表",
+                    authors: "室谷 佳汰, 池田 誠, 野津 亮",
+                    abstract: "人間のグループ学習にヒントを得た深層強化学習手法を提案。異なる性能を持つ複数エージェントの協調により、計算効率と学習性能の両立を実現。CartPole環境での実験において、低性能エージェントが約2倍の性能向上を達成。"
+                },
+                tech_stack: ["Python", "PyTorch", "OpenAI Gym", "深層強化学習", "DQN", "グループ学習"],
+                github: "※研究論文として発表予定のため、ソースコードは非公開",
+                pdf_link: "https://drive.google.com/file/d/1GItqbs9fV0m97421-SUU1qv550ewB7aP/view?usp=sharing"
+            },
+
+            cartpole_q: {
+                title: "グループ学習の報酬分析（国際学会版）",
+                image: "img/cartpole_q.jpg",
+                description: "報酬ヒートマップによるグループ学習メカニズムの詳細分析",
+                motivation: "国際学会での発表に向けて、グループ学習がなぜ効果的なのかをより深く理解するため、各エージェントがどの状態でどれだけの報酬を獲得しているかを視覚的に分析する必要がありました。特に、異なる性能のエージェント間での学習パターンの違いを明確にしたいと考えました。",
+                technical: "matplotlib、seaborn、NumPyを使用して報酬のヒートマップ可視化システムを構築。CartPoleの状態空間（カート位置、カート速度、棒の角度、棒の角速度）を離散化し、各状態における累積報酬を色の濃淡で表現。個別学習とグループ学習の報酬分布を比較分析できるインタラクティブな可視化ツールを開発しました。",
+                outcome: "ヒートマップ分析により、グループ学習時に低性能エージェント（Agent16）が高性能エージェント（Agent64）の学習データから恩恵を受けている具体的な状態領域を特定。特に、棒の角度が±10度以内の微妙なバランス制御において、グループ学習が個別学習を大幅に上回る報酬分布を示すことを発見。この知見により学習メカニズムの理論的根拠を強化できました。",
+                highlights: [
+                    "状態空間の可視化による学習パターン分析",
+                    "棒の角度±10度以内での優位性発見", 
+                    "個別学習vs.グループ学習の定量的比較",
+                    "理論的根拠の強化と国際学会での発表準備"
+                ],
+                research_info: {
+                    conference: "国際学会発表準備中",
+                    authors: "室谷 佳汰, 池田 誠, 野津 亮",
+                    abstract: "深層強化学習におけるグループ学習効果を報酬ヒートマップにより詳細分析。状態空間の可視化により、エージェント間の協調メカニズムを理論的に解明し、学習効率向上の根拠を提示。"
+                },
+                tech_stack: ["Python", "PyTorch", "matplotlib", "seaborn", "NumPy", "データ可視化", "統計分析"],
+                github: "※国際学会発表用研究のため、ソースコードは非公開",
+                pdf_link: "#"
+            },
+
+            learning_app: {
+                title: "楽しく学べる学習管理アプリ（DMM WEBCAMP）",
+                image: "img/dmm.png",
+                description: "プログラミング学習の離脱率を劇的に改善した学習管理アプリ",
+                motivation: "コロナ禍でリモート授業に変わったことで、生徒の離脱率が10.4%から34%まで急増。生徒へのアンケートや面談から「小さな機能を作っても全体が見えなくて達成感がない」「エラーばかりで前に進んでいる気がしない」という声を受け、プログラミング本来の楽しさを届けたいと考えました。",
+                technical: "Ruby on Railsとjavaascriptを使用したWebアプリケーション。学習進捗の可視化機能、次の課題へのヒント表示機能、5分程度で完了する小さな確認問題・演習問題の配置、バーチャル教室への誘導機能を実装。UX設計を重視し、ユーザー目線を徹底した開発プロセスを採用しました。",
+                outcome: "離脱率を34%から11.2%まで劇的に改善（対面時代と同等レベル）。生徒からは「一つひとつの機能が完成する達成感が身についた」「オンライン学習で不安だったが最後まで楽しく勉強できた」との高評価を獲得。プロジェクトマネージャーとして5人チームを率い、技術とマネジメントの両面でスキルを向上させました。",
+                highlights: [
+                    "離脱率を34% → 11.2%に劇的改善（約3分の1に削減）",
+                    "対面授業時代と同等の離脱率まで回復",
+                    "5人チームでのプロジェクト管理を担当",
+                    "ユーザー目線を徹底したUX設計の実践"
+                ],
+                research_info: {
+                    conference: "DMM WEBCAMP 社内プロジェクト発表",
+                    authors: "室谷 佳汰（プロジェクトマネージャー）他4名",
+                    abstract: "コロナ禍でのリモート学習における離脱率問題を解決するため、プログラミング学習の楽しさを届ける学習管理アプリを開発。ユーザー目線を徹底したUX設計により、離脱率を3分の1まで削減することに成功。"
+                },
+                tech_stack: ["Ruby on Rails", "JavaScript", "HTML/CSS", "MySQL", "UX/UI設計", "プロジェクト管理"],
+                github: "※DMM WEBCAMP社内プロジェクトのため、ソースコードは非公開",
+                pdf_link: "https://drive.google.com/file/d/1N3N7Z5tx-lC0JO2I4vafkOax4_iTprR-/view?usp=sharing"
+            }
+        };
+
+        // モーダルを開く関数
+        function openModal(projectId) {
+            const modal = document.getElementById('projectModal');
+            const project = projectData[projectId];
+
+            if (!project) return;
+
+            const modalContent = `
+                <div class="project-details">
+                    <div class="project-header">
+                        <h2>${project.title}</h2>
+                        <img src="${project.image}" alt="${project.title}">
+                    </div>
+
+                    ${project.research_info ? `
+                    <div class="research-paper-section">
+                        <h3>📄 研究論文情報</h3>
+                        <div class="paper-info">
+                            <p><strong>発表先：</strong>${project.research_info.conference}</p>
+                            <p><strong>著者：</strong>${project.research_info.authors}</p>
+                            <p><strong>概要：</strong>${project.research_info.abstract}</p>
+                        </div>
+                        ${project.pdf_link && project.pdf_link !== '#' ? `
+                        <div class="pdf-actions">
+                            <a href="${project.pdf_link}" target="_blank" class="pdf-button">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14,2 14,8 20,8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <polyline points="10,9 9,9 8,9"></polyline>
+                                </svg>
+                                完全版論文PDF を見る
+                            </a>
+                        </div>
+                        ` : ''}
+                    </div>
+                    ` : ''}
+
+                    ${project.highlights ? `
+                    <div class="project-section">
+                        <h3>🔍 研究のハイライト</h3>
+                        <div class="highlights-grid">
+                            ${project.highlights.map(highlight => `
+                                <div class="highlight-item">
+                                    <span class="highlight-icon">✨</span>
+                                    <span>${highlight}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    ` : ''}
+
+                    <div class="project-section">
+                        <h3>開発の動機</h3>
+                        <p style="white-space: pre-line;">${project.motivation}</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h3>技術的なポイント</h3>
+                        <p style="white-space: pre-line;">${project.technical}</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h3>成果</h3>
+                        <p style="white-space: pre-line;">${project.outcome}</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h3>使用技術</h3>
+                        <div class="tech-stack">
+                            ${project.tech_stack.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                        </div>
+                    </div>
+
+                    <div class="links">
+                        <a href="${project.github}" target="_blank">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            `;
+
+            modal.querySelector('.modal-body').innerHTML = modalContent;
+            modal.style.display = 'block';
+            setTimeout(() => modal.classList.add('show'), 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        // モーダルを閉じる関数
+        function closeModal() {
+            const modal = document.getElementById('projectModal');
+            modal.classList.remove('show');
+            setTimeout(() => {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        // モーダルの外側をクリックしたら閉じる
+        window.onclick = function(event) {
+            const modal = document.getElementById('projectModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // ESCキーでモーダルを閉じる
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // スムーズスクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // メニューを閉じる
+                    document.getElementById('menu-btn-check').checked = false;
+                }
+            });
+        });
+
+        // スクロール時のメニューボタン背景色変更
+        window.addEventListener('scroll', function() {
+            const menuBtn = document.querySelector('.menu-btn');
+            if (window.scrollY > 100) {
+                menuBtn.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
+            } else {
+                menuBtn.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
+            }
+        });
+
+        // タイムラインアニメーション
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    const items = entry.target.querySelectorAll('.fade-in');
+                    items.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.classList.add('active');
+                        }, 400 + index * 200);
+                    });
+                    sectionObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        // セクションの監視を開始
+        const timelineSection = document.querySelector('.timeline-section');
+        if (timelineSection) {
+            sectionObserver.observe(timelineSection);
+        }
+    </script>
+</body>
+</html><!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -157,7 +764,7 @@
                         <img src="img/cartpole.png" alt="カートポール">
                     </div>
                     <div class="work-info">
-                        <h3>cartpoleでのグループ学習検証(修論)</h3>
+                        <h3>カートポールでのグループ学習検証</h3>
                         <span class="view-more">詳細を見る</span>
                     </div>
                 </div>
@@ -839,3 +1446,4 @@
         .project-header h2 {
             font-size: 2.4rem;
             margin-bottom
+        )
