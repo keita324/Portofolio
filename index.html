@@ -826,7 +826,7 @@
         const projectData = {
             mario: {
                 title: "マリオAI(深層強化学習)",
-                image: "placeholder",
+                image: "img/mario.png",
                 description: "深層強化学習を用いてスーパーマリオをプレイするAIを開発",
                 motivation: "ゲームAIの可能性を追求したいという思いから、まずは馴染みのあるマリオで強化学習に挑戦。プレイヤーの行動を学習させることで、人間らしい動きを実現することを目指しました。",
                 technical: "PyTorchを使用した深層強化学習モデルの実装。Environment設計からReward設計まで、様々な工夫を重ねました。特に、正確な状態認識のための画面処理や、効果的な報酬設計に注力しました。",
@@ -837,7 +837,7 @@
 
             luigi: {
                 title: "ルイージAI(深層強化学習)",
-                image: "placeholder",
+                image: "img/luigi.png",
                 description: "深層強化学習を用いてスーパーマリオをプレイするAIを開発",
                 motivation: "「人間は他者の行動を観察することで効率的に学習できる」という仮説のもと、AIでその検証を試みました。具体的には、実際にプレイするマリオAIと、その行動を観察するだけのルイージAIを作成し、協調学習の可能性を探究しています。",
                 technical: "PyTorchによる深層強化学習モデルを実装。特に注力した点は：\n・マリオの行動を正確に認識するための画面処理システム\n・観察学習を可能にする報酬設計\n・複数エージェント間での学習情報の共有機構など",
@@ -848,7 +848,7 @@
 
             car: {
                 title: "自動運転AI(深層強化学習)",
-                image: "placeholder",
+                image: "img/car.png",
                 description: "人間の運転行動を模倣する自動運転AIの研究開発",
                 motivation: "自動運転技術の課題の一つに「乗客に優しい運転の実現」があります。既存の強化学習による自動運転AIは、目的地への到達は実現できても、急ブレーキや急カーブなど乗客に負担をかける運転になりがちでした。そこで、人間の運転行動を観察・模倣することで、より快適な運転の実現を目指しています。",
                 technical: "PyTorchによる深層強化学習モデルを実装。以下の点に特に注力しています：\n・人間の運転データからの効率的な学習メカニズム\n・乗り心地を考慮した報酬設計\n・加速度変化の最小化を考慮した行動決定機構\n・安全性と快適性のバランスを取る制御システム",
@@ -859,7 +859,7 @@
 
             cartpole: {
                 title: "カートポールでのグループ学習検証",
-                image: "placeholder",
+                image: "img/cartpole.png",
                 description: "人間のグループ学習を模した深層強化学習AIシステム",
                 motivation: "人間の協調学習からヒントを得て、計算能力の異なる複数のAIエージェントが協力することで、計算効率と学習性能の両立が可能になるという仮説を検証したいと考えました。限られたリソース環境での深層強化学習の適用範囲拡大を目指しています。",
                 technical: "PyTorchを使用した深層強化学習モデルを実装。隠れ層のニューロン数が異なる3つのエージェント（Agent64、Agent32、Agent16）を導入し、共有経験リプレイメモリと適応的エージェント選択機構を組み合わせたグループ学習システムを構築しました。",
@@ -882,7 +882,7 @@
 
             cartpole_q: {
                 title: "グループ学習の報酬分析（国際学会版）",
-                image: "placeholder",
+                image: "img/cartpole_q.jpg",
                 description: "報酬ヒートマップによるグループ学習メカニズムの詳細分析",
                 motivation: "国際学会での発表に向けて、グループ学習がなぜ効果的なのかをより深く理解するため、各エージェントがどの状態でどれだけの報酬を獲得しているかを視覚的に分析する必要がありました。特に、異なる性能のエージェント間での学習パターンの違いを明確にしたいと考えました。",
                 technical: "matplotlib、seaborn、NumPyを使用して報酬のヒートマップ可視化システムを構築。CartPoleの状態空間（カート位置、カート速度、棒の角度、棒の角速度）を離散化し、各状態における累積報酬を色の濃淡で表現。個別学習とグループ学習の報酬分布を比較分析できるインタラクティブな可視化ツールを開発しました。",
@@ -905,7 +905,7 @@
 
             learning_app: {
                 title: "楽しく学べる学習管理アプリ（DMM WEBCAMP）",
-                image: "placeholder",
+                image: "img/dmm.png",
                 description: "プログラミング学習の離脱率を劇的に改善した学習管理アプリ",
                 motivation: "コロナ禍でリモート授業に変わったことで、生徒の離脱率が10.4%から34%まで急増。生徒へのアンケートや面談から「小さな機能を作っても全体が見えなくて達成感がない」「エラーばかりで前に進んでいる気がしない」という声を受け、プログラミング本来の楽しさを届けたいと考えました。",
                 technical: "Ruby on Railsとjavaascriptを使用したWebアプリケーション。学習進捗の可視化機能、次の課題へのヒント表示機能、5分程度で完了する小さな確認問題・演習問題の配置、バーチャル教室への誘導機能を実装。UX設計を重視し、ユーザー目線を徹底した開発プロセスを採用しました。",
@@ -919,6 +919,46 @@
                 research_info: {
                     conference: "DMM WEBCAMP 社内プロジェクト発表",
                     authors: "室谷 佳汰（プロジェクトマネージャー）他4名",
+                    abstract: "コロナ禍でのリモート学習における離脱率問題を解決するため、プログラミング学習の楽しさを届ける学習管理アプリを開発。ユーザー目線を徹底したUX設計により、離脱率を3分の1まで削減することに成功。"
+                },
+                tech_stack: ["Ruby on Rails", "JavaScript", "HTML/CSS", "MySQL", "UX/UI設計", "プロジェクト管理"],
+                github: "※DMM WEBCAMP社内プロジェクトのため、ソースコードは非公開",
+                pdf_link: "https://drive.google.com/file/d/1N3N7Z5tx-lC0JO2I4vafkOax4_iTprR-/view?usp=sharing"
+            },
+
+            nagano: {
+                title: "ECサイト(スイーツ販売)",
+                image: "img/nagano.png",
+                description: "長野県の特産品を扱うECサイトの開発",
+                motivation: "実践的なWebアプリケーション開発の経験を積むため、実際のビジネスに近い形でのECサイト開発に挑戦しました。",
+                technical: "Ruby on Railsを使用したフルスタック開発。ユーザー管理、商品管理、注文処理など、ECサイトに必要な機能を実装。特に、カート機能やお気に入り機能の実装に工夫を凝らしました。",
+                outcome: "基本的なECサイトの機能を備えた完成度の高いサイトを構築。レスポンシブデザインにも対応し、使いやすいUIを実現しました。",
+                tech_stack: ["HTML/CSS", "Ruby on Rails", "Bootstrap","jQuery", "MySQL"],
+                github: "https://github.com/keita324/ECsite"
+            },
+
+            bookers: {
+                title: "Bookers(本のレビューサイト)",
+                image: "img/bookers2.jpg",
+                description: "本の感想を共有できるレビューサイト",
+                motivation: "読書好きのコミュニティを作りたいと考え、本の感想を気軽にシェアできるプラットフォームを開発しました。",
+                technical: "Ruby on Railsでの基本的なCRUD機能に加え、ユーザーフォロー機能やいいね機能を実装。また、非同期通信を活用して、スムーズな操作感を実現しました。",
+                outcome: "読書記録を簡単に管理でき、他のユーザーと感想を共有できるコミュニティサイトが完成しました。",
+                tech_stack: ["HTML/CSS", "Ruby on Rails", "jQuery", "Bootstrap"],
+                github: "https://github.com/keita324/bookers2-muro"
+            },
+
+            meshiterro: {
+                title: "meshiterro(食事投稿サイト)",
+                image: "img/meshittero.png",
+                description: "食事の写真と感想を共有できるSNSサイト",
+                motivation: "グルメ好きが気軽に情報交換できるプラットフォームを作りたいと考え、開発に着手しました。",
+                technical: "画像アップロード機能、位置情報の管理、タグ付け機能などを実装。また、検索機能を充実させ、ユーザーが求める情報に素早くアクセスできるようにしました。",
+                outcome: "食事の記録と共有が簡単にできるSNSサイトを構築。ユーザー同士のインタラクションを促進する機能も実装しました。",
+                tech_stack: ["HTML/CSS", "Ruby on Rails","Bootstrap"],
+                github: "https://github.com/keita324/meshiterro"
+            }
+        };ジェクトマネージャー）他4名",
                     abstract: "コロナ禍でのリモート学習における離脱率問題を解決するため、プログラミング学習の楽しさを届ける学習管理アプリを開発。ユーザー目線を徹底したUX設計により、離脱率を3分の1まで削減することに成功。"
                 },
                 tech_stack: ["Ruby on Rails", "JavaScript", "HTML/CSS", "MySQL", "UX/UI設計", "プロジェクト管理"],
