@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>室谷佳汰 - ポートフォリオ</title>
-    <link rel="stylesheet" href="index.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=Cormorant+Garamond:wght@300;400;700&display=swap');
@@ -168,6 +167,7 @@
             height: 100%;
             object-fit: cover;
             z-index: -1;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
 
         .hero-content {
@@ -238,6 +238,7 @@
             height: auto;
             object-fit: cover;
             border-radius: 20px;
+            background: #ddd;
         }
 
         .about-content {
@@ -258,185 +259,6 @@
         p {
             font-size: 1.1rem;
             max-width: 600px;
-        }
-
-        /* Timeline */
-        .timeline {
-            padding: 100px 0;
-            background-color: #f9f9f9;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .section-title {
-            text-align: center;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 4rem;
-            margin-bottom: 30px;
-        }
-
-        .timeline-arrow-line {
-            position: relative;
-            height: 40px;
-            margin-bottom: 40px;
-        }
-
-        .timeline-arrow-line .line {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 60%;
-            height: 4px;
-            background-color: #333;
-        }
-
-        .timeline-arrow-line .arrow {
-            position: absolute;
-            right: 19%;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 0;
-            height: 0;
-            border-left: 15px solid #333;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-        }
-
-        .timeline-container {
-            position: relative;
-            padding: 40px 0;
-        }
-
-        .timeline-track {
-            display: flex;
-            gap: 30px;
-            padding: 0 20px;
-            overflow-x: auto;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-        }
-
-        .timeline-track::-webkit-scrollbar {
-            display: none;
-        }
-
-        .timeline-item {
-            flex: 0 0 400px;
-            position: relative;
-        }
-
-        .timeline-content {
-            background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.1);
-            padding: 30px;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .timeline-content:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 30px rgba(0,0,0,0.15);
-        }
-
-        .timeline-date {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        .timeline-content h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .timeline-images {
-            position: relative;
-            width: 100%;
-            height: 220px;
-            margin: 20px 0;
-            display: flex;
-            justify-content: flex-start;
-            padding-left: 40px;
-        }
-
-        .image-large {
-            position: relative;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 4px solid #fff;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-            z-index: 1;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .image-small {
-            position: absolute;
-            width: 110px;
-            height: 110px;
-            top: 60%;
-            left: 220px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 4px solid #fff;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-            z-index: 2;
-            transform: translateY(-50%);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .timeline-content:hover .image-large {
-            transform: scale(1.05) translateX(-5px);
-        }
-
-        .timeline-content:hover .image-small {
-            transform: translateY(-50%) scale(1.05) translateX(5px);
-        }
-
-        .image-large img,
-        .image-small img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .timeline-content p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #666;
-            flex-grow: 1;
-        }
-
-        /* アニメーション用のスタイル */
-        .timeline-section {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .fade-in {
-            opacity: 1;
-            transform: translateY(0);
-            visibility: visible;
-        }
-
-        .timeline-section.active {
-            opacity: 1;
-            visibility: visible;
-            transition: opacity 0.6s ease;
-        }
-
-        .timeline-section.active .fade-in.active {
-            opacity: 1;
-            transform: translateY(0);
-            visibility: visible;
-            transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
         /* Previous Work */
@@ -481,6 +303,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            background: #ddd;
         }
 
         .work-info {
@@ -504,7 +327,7 @@
         .modal {
             display: none;
             position: fixed;
-            z-index: 1000;
+            z-index: 2000;
             left: 0;
             top: 0;
             width: 100%;
@@ -578,6 +401,7 @@
             height: 400px;
             object-fit: cover;
             border-radius: 8px;
+            background: #ddd;
         }
 
         .project-section {
@@ -756,18 +580,6 @@
                 grid-template-columns: repeat(2, 1fr);
                 padding: 0 50px;
             }
-
-            .timeline-item {
-                flex: 0 0 350px;
-            }
-            
-            .timeline-arrow-line .line {
-                width: 70%;
-            }
-            
-            .timeline-arrow-line .arrow {
-                right: 14%;
-            }
         }
 
         @media (max-width: 768px) {
@@ -808,50 +620,6 @@
                 height: 100px;
             }
 
-            .timeline-track {
-                gap: 20px;
-                padding: 0 10px;
-            }
-
-            .timeline-item {
-                flex: 0 0 300px;
-            }
-
-            .timeline-content h3 {
-                font-size: 1.5rem;
-            }
-
-            .timeline-content p {
-                font-size: 1rem;
-            }
-
-            .section-title {
-                font-size: 3rem;
-            }
-            
-            .timeline-arrow-line .line {
-                width: 80%;
-            }
-            
-            .timeline-arrow-line .arrow {
-                right: 9%;
-            }
-
-            .timeline-images {
-                padding-left: 20px;
-            }
-
-            .image-large {
-                width: 160px;
-                height: 160px;
-            }
-
-            .image-small {
-                width: 80px;
-                height: 80px;
-                left: 180px;
-            }
-
             .modal-content {
                 width: 95%;
                 margin: 10% auto;
@@ -875,7 +643,6 @@
             <div class="menu-content">
                 <ul>
                     <li><a href="#about">About Me</a></li>
-                    <li><a href="#journey">MY JOURNEY</a></li>
                     <li><a href="#works">PREVIOUS WORK</a></li>
                     <li><a href="#contact">GET IN TOUCH</a></li>
                 </ul>
@@ -885,7 +652,7 @@
 
     <section class="hero">
         <div class="hero-inner">
-           <img src="img/fuji.jpg" alt="室谷佳汰の背景" class="hero-background">
+           <div class="hero-background"></div>
             <div class="hero-content">
                 <h1>Muroya Keita</h1>
                 <div class="subtitle">Thank you for coming!</div>
@@ -901,7 +668,9 @@
     <div class="container">
         <section class="about" id="about">
             <div class="about-image">
-                <img src="img/horse.jpg" alt="笑顔の写真">
+                <div style="width: 100%; height: 300px; background: #ddd; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: #999;">
+                    画像プレースホルダー
+                </div>
             </div>
             <div class="about-content">
                 <h2>About Me</h2>
@@ -914,107 +683,14 @@
             </div>
         </section>
 
-        <section class="timeline timeline-section" id="journey">
-            <div class="container">
-                <h2 class="section-title">MY JOURNEY</h2>
-                
-                <div class="timeline-arrow-line">
-                    <div class="line"></div>
-                    <div class="arrow"></div>
-                </div>
-                
-                <div class="timeline-container">
-                    <div class="timeline-track">
-                        <div class="timeline-item fade-in">
-                            <div class="timeline-content">
-                                <div class="timeline-date">幼少期 - 高校</div>
-                                <h3>つくることが好きだった</h3>
-                                <div class="timeline-images">
-                                    <div class="image-large">
-                                        <img src="img/kid.jpg" alt="幼少期の写真メイン">
-                                    </div>
-                                    <div class="image-small">
-                                        <img src="img/kid2.JPG" alt="幼少期の写真サブ">
-                                    </div>
-                                </div>
-                                <p>滋賀県彦根市で生まれ育つ。<br>小さい頃からものづくりで人を喜ばせることが好きで、想像力豊かな性格でした。小学生の時にはゲームやWebサイトを自作し、友人や家族に見せて感想を聞いて回ることも。</p>
-                            </div>
-                        </div>
-        
-                        <div class="timeline-item fade-in">
-                            <div class="timeline-content">
-                                <div class="timeline-date">大学時代</div>
-                                <h3>人の心への興味</h3>
-                                <div class="timeline-images">
-                                    <div class="image-large">
-                                        <img src="img/daigaku.JPG" alt="大学時代の写真メイン">
-                                    </div>
-                                    <div class="image-small">
-                                        <img src="img/daigaku2-1.jpg" alt="大学時代の写真サブ">
-                                    </div>
-                                </div>
-                                <p>人の心への興味から、大阪府立大学に入学し、臨床心理学を専攻しました。<br>カウンセリングや文献調査を通じて、人を喜ばせるには「深層心理」の存在があることを学びました。</p>
-                            </div>
-                        </div>
-        
-                        <div class="timeline-item fade-in">
-                            <div class="timeline-content">
-                                <div class="timeline-date">大学時代</div>
-                                <h3>プログラミング講師に</h3>
-                                <div class="timeline-images">
-                                    <div class="image-large">
-                                        <img src="img/teach.JPG" alt="講師時代の写真メイン">
-                                    </div>
-                                    <div class="image-small">
-                                        <img src="img/teach2.JPG" alt="講師時代の写真サブ">
-                                    </div>
-                                </div>
-                                <p>小中学生の時に熱中したプログラミングの楽しさが忘れられず、文系未経験から講師になりました。<br>生徒の悩みを解決しようと作ったアプリが大好評で、技術で人を喜ばせるやりがいを思い出しました。</p>
-                            </div>
-                        </div>
-        
-                        <div class="timeline-item fade-in">
-                            <div class="timeline-content">
-                                <div class="timeline-date">大学院進学</div>
-                                <h3>文系から理系の大学院へ</h3>
-                                <div class="timeline-images">
-                                    <div class="image-large">
-                                        <img src="img/daigakuin1-1.jpg" alt="大学院の写真メイン">
-                                    </div>
-                                    <div class="image-small">
-                                        <img src="img/daigakuin2.JPG" alt="大学院の写真サブ">
-                                    </div>
-                                </div>
-                                <p>プログラミング講師の経験から、技術によって人の心を動かす楽しさを思い出し、大学院から機械学習・AIゼミへ進学しました。<br>「心理学を活かした、人に優しいAI」をテーマに研究に取り組んでいます。</p>
-                            </div>
-                        </div>
-        
-                        <div class="timeline-item fade-in">
-                            <div class="timeline-content">
-                                <div class="timeline-date">現在</div>
-                                <h3>未来への展望</h3>
-                                <div class="timeline-images">
-                                    <div class="image-large">
-                                        <img src="img/mirai.JPG" alt="現在の写真メイン">
-                                    </div>
-                                    <div class="image-small">
-                                        <img src="img/mirai2.JPG" alt="現在の写真サブ">
-                                    </div>
-                                </div>
-                                <p>現在は技術力と人間性の融合を目指し、研究活動に取り組んでいます。<br>将来は、単純に技術で効率化を行うだけでなく、人の心に寄り添った技術を提供できるような仕事がしたいと考えています。</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="previous-work" id="works">
             <h2>PREVIOUS<br>WORK</h2>
             <div class="work-grid">
                 <div class="work-item" onclick="openModal('cartpole')">
                     <div class="work-image">
-                        <img src="img/cartpole.png" alt="カートポール">
+                        <div style="width: 100%; height: 200px; background: #ddd; display: flex; align-items: center; justify-content: center; color: #999;">
+                            カートポール画像
+                        </div>
                     </div>
                     <div class="work-info">
                         <h3>カートポールでのグループ学習検証</h3>
@@ -1024,17 +700,21 @@
 
                 <div class="work-item" onclick="openModal('cartpole_q')">
                     <div class="work-image">
-                        <img src="img/cartpole_q.jpg" alt="ヒートマップ">
+                        <div style="width: 100%; height: 200px; background: #ddd; display: flex; align-items: center; justify-content: center; color: #999;">
+                            ヒートマップ画像
+                        </div>
                     </div>
                     <div class="work-info">
-                        <h3>グループ学習の報酬分析（国際学会）</h3>
+                        <h3>グループ学習の報酬分析（国際学会版）</h3>
                         <span class="view-more">詳細を見る</span>
                     </div>
                 </div>
 
                 <div class="work-item" onclick="openModal('learning_app')">
                     <div class="work-image">
-                        <img src="img/dmm.png" alt="学習管理アプリ">
+                        <div style="width: 100%; height: 200px; background: #ddd; display: flex; align-items: center; justify-content: center; color: #999;">
+                            学習アプリ画像
+                        </div>
                     </div>
                     <div class="work-info">
                         <h3>楽しく学べる学習管理アプリ（DMM WEBCAMP）</h3>
@@ -1044,7 +724,9 @@
 
                 <div class="work-item" onclick="openModal('mario')">
                     <div class="work-image">
-                        <img src="img/mario.png" alt="マリオAI">
+                        <div style="width: 100%; height: 200px; background: #ddd; display: flex; align-items: center; justify-content: center; color: #999;">
+                            マリオAI画像
+                        </div>
                     </div>
                     <div class="work-info">
                         <h3>マリオAI(深層強化学習)</h3>
@@ -1054,7 +736,9 @@
 
                 <div class="work-item" onclick="openModal('luigi')">
                     <div class="work-image">
-                        <img src="img/luigi.png" alt="ルイージAI">
+                        <div style="width: 100%; height: 200px; background: #ddd; display: flex; align-items: center; justify-content: center; color: #999;">
+                            ルイージAI画像
+                        </div>
                     </div>
                     <div class="work-info">
                         <h3>ルイージAI(深層強化学習)</h3>
@@ -1064,40 +748,12 @@
 
                 <div class="work-item" onclick="openModal('car')">
                     <div class="work-image">
-                        <img src="img/car.png" alt="自動運転AI">
+                        <div style="width: 100%; height: 200px; background: #ddd; display: flex; align-items: center; justify-content: center; color: #999;">
+                            自動運転AI画像
+                        </div>
                     </div>
                     <div class="work-info">
                         <h3>自動運転AI</h3>
-                        <span class="view-more">詳細を見る</span>
-                    </div>
-                </div>
-
-                <div class="work-item" onclick="openModal('nagano')">
-                    <div class="work-image">
-                        <img src="img/nagano.png" alt="ECサイト">
-                    </div>
-                    <div class="work-info">
-                        <h3>ECサイト(スイーツ販売)</h3>
-                        <span class="view-more">詳細を見る</span>
-                    </div>
-                </div>
-
-                <div class="work-item" onclick="openModal('bookers')">
-                    <div class="work-image">
-                        <img src="img/bookers2.jpg" alt="Bookers">
-                    </div>
-                    <div class="work-info">
-                        <h3>Bookers(本のレビューサイト)</h3>
-                        <span class="view-more">詳細を見る</span>
-                    </div>
-                </div>
-
-                <div class="work-item" onclick="openModal('meshiterro')">
-                    <div class="work-image">
-                        <img src="img/meshittero.png" alt="meshiterro">
-                    </div>
-                    <div class="work-info">
-                        <h3>meshiterro(食事投稿サイト)</h3>
                         <span class="view-more">詳細を見る</span>
                     </div>
                 </div>
@@ -1134,7 +790,7 @@
         const projectData = {
             mario: {
                 title: "マリオAI(深層強化学習)",
-                image: "img/mario.png",
+                image: "placeholder",
                 description: "深層強化学習を用いてスーパーマリオをプレイするAIを開発",
                 motivation: "ゲームAIの可能性を追求したいという思いから、まずは馴染みのあるマリオで強化学習に挑戦。プレイヤーの行動を学習させることで、人間らしい動きを実現することを目指しました。",
                 technical: "PyTorchを使用した深層強化学習モデルの実装。Environment設計からReward設計まで、様々な工夫を重ねました。特に、正確な状態認識のための画面処理や、効果的な報酬設計に注力しました。",
@@ -1145,62 +801,29 @@
 
             luigi: {
                 title: "ルイージAI(深層強化学習)",
-                image: "img/luigi.png",
+                image: "placeholder",
                 description: "深層強化学習を用いてスーパーマリオをプレイするAIを開発",
                 motivation: "「人間は他者の行動を観察することで効率的に学習できる」という仮説のもと、AIでその検証を試みました。具体的には、実際にプレイするマリオAIと、その行動を観察するだけのルイージAIを作成し、協調学習の可能性を探究しています。",
-                technical: "PyTorchによる深層強化学習モデルを実装。特に注力した点は：\\n・マリオの行動を正確に認識するための画面処理システム\\n・観察学習を可能にする報酬設計\\n・複数エージェント間での学習情報の共有機構など",
-                outcome: "マリオAIの単独学習では1000回の試行で到達できなかったステージを、ルイージAIとの協調により700回の試行でクリア達成\\n・観察による学習が、試行錯誤による直接学習を補完できることを実証\\n・この知見を人間の教育現場での「見て学ぶ」という学習手法の理論的裏付けとして活用することを検討中",
+                technical: "PyTorchによる深層強化学習モデルを実装。特に注力した点は：\n・マリオの行動を正確に認識するための画面処理システム\n・観察学習を可能にする報酬設計\n・複数エージェント間での学習情報の共有機構など",
+                outcome: "マリオAIの単独学習では1000回の試行で到達できなかったステージを、ルイージAIとの協調により700回の試行でクリア達成\n・観察による学習が、試行錯誤による直接学習を補完できることを実証\n・この知見を人間の教育現場での「見て学ぶ」という学習手法の理論的裏付けとして活用することを検討中",
                 tech_stack: ["Python", "PyTorch", "OpenAI Gym", "深層強化学習", "Computer Vision"],
                 github: "※他研究室との共同研究のため、ソースコードは非公開"
             },
 
             car: {
                 title: "自動運転AI(深層強化学習)",
-                image: "img/car.png",
+                image: "placeholder",
                 description: "人間の運転行動を模倣する自動運転AIの研究開発",
                 motivation: "自動運転技術の課題の一つに「乗客に優しい運転の実現」があります。既存の強化学習による自動運転AIは、目的地への到達は実現できても、急ブレーキや急カーブなど乗客に負担をかける運転になりがちでした。そこで、人間の運転行動を観察・模倣することで、より快適な運転の実現を目指しています。",
-                technical: "PyTorchによる深層強化学習モデルを実装。以下の点に特に注力しています：\\n・人間の運転データからの効率的な学習メカニズム\\n・乗り心地を考慮した報酬設計\\n・加速度変化の最小化を考慮した行動決定機構\\n・安全性と快適性のバランスを取る制御システム",
+                technical: "PyTorchによる深層強化学習モデルを実装。以下の点に特に注力しています：\n・人間の運転データからの効率的な学習メカニズム\n・乗り心地を考慮した報酬設計\n・加速度変化の最小化を考慮した行動決定機構\n・安全性と快適性のバランスを取る制御システム",
                 outcome: "Virtual Motorsport Labさまと共同研究を予定。VML自動運転ハッカソンにも出場しました。",
                 tech_stack: ["Python", "PyTorch", "深層強化学習", "模倣学習", "Computer Vision", "行動予測"],
                 github: "※企業との共同研究のため、ソースコードは非公開"
             },
 
-            nagano: {
-                title: "ECサイト(スイーツ販売)",
-                image: "img/nagano.png",
-                description: "長野県の特産品を扱うECサイトの開発",
-                motivation: "実践的なWebアプリケーション開発の経験を積むため、実際のビジネスに近い形でのECサイト開発に挑戦しました。",
-                technical: "Ruby on Railsを使用したフルスタック開発。ユーザー管理、商品管理、注文処理など、ECサイトに必要な機能を実装。特に、カート機能やお気に入り機能の実装に工夫を凝らしました。",
-                outcome: "基本的なECサイトの機能を備えた完成度の高いサイトを構築。レスポンシブデザインにも対応し、使いやすいUIを実現しました。",
-                tech_stack: ["HTML/CSS", "Ruby on Rails", "Bootstrap","jQuery", "MySQL"],
-                github: "https://github.com/keita324/ECsite"
-            },
-
-            bookers: {
-                title: "Bookers(本のレビューサイト)",
-                image: "img/bookers2.jpg",
-                description: "本の感想を共有できるレビューサイト",
-                motivation: "読書好きのコミュニティを作りたいと考え、本の感想を気軽にシェアできるプラットフォームを開発しました。",
-                technical: "Ruby on Railsでの基本的なCRUD機能に加え、ユーザーフォロー機能やいいね機能を実装。また、非同期通信を活用して、スムーズな操作感を実現しました。",
-                outcome: "読書記録を簡単に管理でき、他のユーザーと感想を共有できるコミュニティサイトが完成しました。",
-                tech_stack: ["HTML/CSS", "Ruby on Rails", "jQuery", "Bootstrap"],
-                github: "https://github.com/keita324/bookers2-muro"
-            },
-
-            meshiterro: {
-                title: "meshiterro(食事投稿サイト)",
-                image: "img/meshittero.png",
-                description: "食事の写真と感想を共有できるSNSサイト",
-                motivation: "グルメ好きが気軽に情報交換できるプラットフォームを作りたいと考え、開発に着手しました。",
-                technical: "画像アップロード機能、位置情報の管理、タグ付け機能などを実装。また、検索機能を充実させ、ユーザーが求める情報に素早くアクセスできるようにしました。",
-                outcome: "食事の記録と共有が簡単にできるSNSサイトを構築。ユーザー同士のインタラクションを促進する機能も実装しました。",
-                tech_stack: ["HTML/CSS", "Ruby on Rails","Bootstrap"],
-                github: "https://github.com/keita324/meshiterro"
-            },
-
             cartpole: {
                 title: "カートポールでのグループ学習検証",
-                image: "img/cartpole.png",
+                image: "placeholder",
                 description: "人間のグループ学習を模した深層強化学習AIシステム",
                 motivation: "人間の協調学習からヒントを得て、計算能力の異なる複数のAIエージェントが協力することで、計算効率と学習性能の両立が可能になるという仮説を検証したいと考えました。限られたリソース環境での深層強化学習の適用範囲拡大を目指しています。",
                 technical: "PyTorchを使用した深層強化学習モデルを実装。隠れ層のニューロン数が異なる3つのエージェント（Agent64、Agent32、Agent16）を導入し、共有経験リプレイメモリと適応的エージェント選択機構を組み合わせたグループ学習システムを構築しました。",
@@ -1222,8 +845,8 @@
             },
 
             cartpole_q: {
-                title: "グループ学習の報酬分析（国際学会）",
-                image: "img/cartpole_q.jpg",
+                title: "グループ学習の報酬分析（国際学会版）",
+                image: "placeholder",
                 description: "報酬ヒートマップによるグループ学習メカニズムの詳細分析",
                 motivation: "国際学会での発表に向けて、グループ学習がなぜ効果的なのかをより深く理解するため、各エージェントがどの状態でどれだけの報酬を獲得しているかを視覚的に分析する必要がありました。特に、異なる性能のエージェント間での学習パターンの違いを明確にしたいと考えました。",
                 technical: "matplotlib、seaborn、NumPyを使用して報酬のヒートマップ可視化システムを構築。CartPoleの状態空間（カート位置、カート速度、棒の角度、棒の角速度）を離散化し、各状態における累積報酬を色の濃淡で表現。個別学習とグループ学習の報酬分布を比較分析できるインタラクティブな可視化ツールを開発しました。",
@@ -1246,7 +869,7 @@
 
             learning_app: {
                 title: "楽しく学べる学習管理アプリ（DMM WEBCAMP）",
-                image: "img/dmm.png",
+                image: "placeholder",
                 description: "プログラミング学習の離脱率を劇的に改善した学習管理アプリ",
                 motivation: "コロナ禍でリモート授業に変わったことで、生徒の離脱率が10.4%から34%まで急増。生徒へのアンケートや面談から「小さな機能を作っても全体が見えなくて達成感がない」「エラーばかりで前に進んでいる気がしない」という声を受け、プログラミング本来の楽しさを届けたいと考えました。",
                 technical: "Ruby on Railsとjavaascriptを使用したWebアプリケーション。学習進捗の可視化機能、次の課題へのヒント表示機能、5分程度で完了する小さな確認問題・演習問題の配置、バーチャル教室への誘導機能を実装。UX設計を重視し、ユーザー目線を徹底した開発プロセスを採用しました。",
@@ -1270,16 +893,25 @@
 
         // モーダルを開く関数
         function openModal(projectId) {
+            console.log('Modal opening:', projectId);
             const modal = document.getElementById('projectModal');
             const project = projectData[projectId];
 
-            if (!project) return;
+            if (!project) {
+                console.error('Project not found:', projectId);
+                alert('プロジェクト情報が見つかりません: ' + projectId);
+                return;
+            }
+
+            console.log('Project data:', project);
 
             const modalContent = `
                 <div class="project-details">
                     <div class="project-header">
                         <h2>${project.title}</h2>
-                        <img src="${project.image}" alt="${project.title}">
+                        <div style="width: 100%; height: 400px; background: #ddd; display: flex; align-items: center; justify-content: center; color: #999; border-radius: 8px;">
+                            プロジェクト画像プレースホルダー
+                        </div>
                     </div>
 
                     ${project.research_info ? `
@@ -1354,10 +986,16 @@
                 </div>
             `;
 
-            modal.querySelector('.modal-body').innerHTML = modalContent;
-            modal.style.display = 'block';
-            setTimeout(() => modal.classList.add('show'), 10);
-            document.body.style.overflow = 'hidden';
+            try {
+                modal.querySelector('.modal-body').innerHTML = modalContent;
+                modal.style.display = 'block';
+                setTimeout(() => modal.classList.add('show'), 10);
+                document.body.style.overflow = 'hidden';
+                console.log('Modal should be visible now');
+            } catch (error) {
+                console.error('Error displaying modal:', error);
+                alert('モーダルの表示でエラーが発生しました');
+            }
         }
 
         // モーダルを閉じる関数
@@ -1378,4 +1016,17 @@
             }
         }
 
-        //
+        // ESCキーでモーダルを閉じる
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // ページ読み込み後の処理
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Page loaded, modal setup complete');
+        });
+    </script>
+</body>
+</html>
