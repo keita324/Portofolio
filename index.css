@@ -337,21 +337,6 @@ a {
     animation: riseIn 1s ease .45s forwards;
 }
 
-.hero-sub {
-    margin-top: 18px;
-    font-size: clamp(.95rem, 2vw, 1.15rem);
-    font-weight: 400;
-    letter-spacing: .1em;
-    color: rgba(255, 255, 255, .92);
-    opacity: 0;
-    animation: riseIn 1s ease .75s forwards;
-}
-
-.hero-sub .divider {
-    margin: 0 .8em;
-    opacity: .5;
-}
-
 @keyframes riseIn {
     from {
         opacity: 0;
@@ -623,12 +608,14 @@ section {
 .timeline-item {
     position: relative;
     width: 50%;
-    padding: 0 52px 70px 0;
+    padding: 0 52px 48px 0;
 }
 
+/* 偶数カードを引き上げて左右を互い違いに組み合わせ、縦の隙間を圧縮 */
 .timeline-item:nth-child(even) {
     margin-left: 50%;
-    padding: 0 0 70px 52px;
+    margin-top: -180px;
+    padding: 0 0 48px 52px;
 }
 
 .timeline-item:last-child {
@@ -658,7 +645,7 @@ section {
     border: 1px solid var(--line);
     border-radius: var(--radius);
     box-shadow: var(--shadow-sm);
-    padding: 30px 30px 26px;
+    padding: 26px 26px 22px;
     transition: transform .35s ease, box-shadow .35s ease;
 }
 
@@ -1051,6 +1038,265 @@ section {
     color: var(--muted);
 }
 
+/* ---------- Publications ---------- */
+.publications {
+    padding: 120px 0 130px;
+    background:
+        radial-gradient(700px 400px at 92% 0%, rgba(76, 99, 224, .06), transparent 65%),
+        radial-gradient(600px 380px at 4% 100%, rgba(47, 179, 216, .07), transparent 65%),
+        var(--surface);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.award-card {
+    display: flex;
+    gap: 26px;
+    align-items: flex-start;
+    background: linear-gradient(120deg, rgba(76, 99, 224, .08), rgba(47, 179, 216, .08));
+    border: 1px solid rgba(76, 99, 224, .28);
+    border-radius: var(--radius);
+    padding: 30px 34px;
+    margin-bottom: 44px;
+}
+
+.award-icon {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--grad);
+    color: #fff;
+    box-shadow: var(--shadow-md);
+}
+
+.award-label {
+    display: inline-block;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .18em;
+    color: var(--accent);
+}
+
+.award-body h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 6px 0 8px;
+}
+
+.award-body p {
+    font-size: .9rem;
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+.pub-list {
+    list-style: none;
+    display: grid;
+    gap: 16px;
+}
+
+.pub-item {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 24px 28px;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.pub-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.pub-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.pub-year {
+    font-size: .82rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    color: var(--accent);
+    margin-right: 4px;
+}
+
+.pub-tag {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    padding: 3px 12px;
+    border-radius: 999px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    color: var(--muted);
+}
+
+.pub-tag.intl {
+    background: var(--grad);
+    border: none;
+    color: #fff;
+}
+
+.pub-tag.journal {
+    background: var(--ink);
+    border: none;
+    color: #fff;
+}
+
+.pub-tag.reviewed {
+    background: rgba(76, 99, 224, .1);
+    border-color: rgba(76, 99, 224, .35);
+    color: var(--accent);
+}
+
+.pub-title {
+    font-size: 1.04rem;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 6px;
+}
+
+.pub-authors {
+    font-size: .86rem;
+    color: var(--muted);
+}
+
+.pub-authors strong {
+    color: var(--ink);
+}
+
+.pub-venue {
+    font-size: .82rem;
+    color: var(--muted);
+}
+
+/* ---------- Hobbies ---------- */
+.hobbies {
+    padding: 120px 0 140px;
+}
+
+.hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.hobby-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.hobby-image {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #eef0f4;
+}
+
+.hobby-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 40%;
+    transition: transform .5s ease;
+}
+
+.hobby-card:hover .hobby-image img {
+    transform: scale(1.06);
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(16, 20, 31, .72);
+    color: #fff;
+    transition: transform .3s ease, background-color .3s ease;
+}
+
+.play-icon svg {
+    margin-left: 3px;
+}
+
+.hobby-card:hover .play-icon {
+    transform: translate(-50%, -50%) scale(1.12);
+    background: var(--accent);
+}
+
+.hobby-info {
+    padding: 22px 24px 24px;
+}
+
+.hobby-date {
+    display: inline-block;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .24em;
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+
+.hobby-info h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.hobby-info p {
+    font-size: .88rem;
+    color: var(--muted);
+    line-height: 1.85;
+}
+
+.hobby-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    font-size: .84rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.hobby-link::after {
+    content: '→';
+    transition: transform .3s ease;
+}
+
+.hobby-card:hover .hobby-link::after {
+    transform: translateX(5px);
+}
+
 /* ---------- Contact ---------- */
 .contact {
     padding: 130px 0 90px;
@@ -1190,7 +1436,8 @@ section {
     .timeline-item:nth-child(even) {
         width: 100%;
         margin-left: 0;
-        padding: 0 0 54px 44px;
+        margin-top: 0;
+        padding: 0 0 44px 44px;
     }
 
     .timeline-item::before,
@@ -1207,9 +1454,21 @@ section {
 
     .about,
     .journey,
-    .works {
+    .works,
+    .publications,
+    .hobbies {
         padding-top: 90px;
         padding-bottom: 100px;
+    }
+
+    .award-card {
+        flex-direction: column;
+        gap: 16px;
+        padding: 24px 22px;
+    }
+
+    .pub-item {
+        padding: 20px 18px;
     }
 
     .section-head {
