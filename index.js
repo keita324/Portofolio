@@ -207,6 +207,31 @@ window.addEventListener('scroll', () => {
 
 onScroll();
 
+// ---------- タイムライン横スクロール ----------
+const tlWrap = document.querySelector('.timeline-wrap');
+if (tlWrap) {
+    const track = tlWrap.querySelector('.timeline-track');
+    const prevBtn = tlWrap.querySelector('.tl-prev');
+    const nextBtn = tlWrap.querySelector('.tl-next');
+    const step = () => {
+        const item = track.querySelector('.timeline-item');
+        return item ? item.offsetWidth + 28 : 400;
+    };
+
+    prevBtn.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+    nextBtn.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+
+    const updateTlButtons = () => {
+        const max = track.scrollWidth - track.clientWidth;
+        prevBtn.classList.toggle('disabled', track.scrollLeft <= 4);
+        nextBtn.classList.toggle('disabled', track.scrollLeft >= max - 4);
+        tlWrap.classList.toggle('at-end', track.scrollLeft >= max - 4);
+    };
+    track.addEventListener('scroll', updateTlButtons, { passive: true });
+    window.addEventListener('resize', updateTlButtons, { passive: true });
+    updateTlButtons();
+}
+
 // ---------- モバイルメニュー: リンククリックで閉じる ----------
 const menuCheck = document.getElementById('menu-check');
 document.querySelectorAll('.mobile-menu a, .nav-links a').forEach(link => {

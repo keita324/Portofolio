@@ -587,46 +587,69 @@ section {
     border-bottom: 1px solid var(--line);
 }
 
-.timeline {
+.timeline-wrap {
     position: relative;
-    max-width: 980px;
-    margin: 0 auto;
 }
 
-.timeline::before {
+/* 右端のフェードでスクロールできることを示唆 */
+.timeline-wrap::after {
     content: '';
     position: absolute;
-    top: 8px;
-    bottom: 8px;
-    left: 50%;
-    width: 2px;
-    transform: translateX(-50%);
-    background: linear-gradient(to bottom, rgba(76, 99, 224, .5), rgba(47, 179, 216, .5));
-    border-radius: 2px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 70px;
+    background: linear-gradient(to right, transparent, var(--surface));
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity .3s ease;
+    z-index: 2;
+}
+
+.timeline-wrap.at-end::after {
+    opacity: 0;
+}
+
+.timeline-track {
+    display: flex;
+    gap: 28px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding: 4px 4px 24px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.timeline-track::-webkit-scrollbar {
+    display: none;
+}
+
+.timeline-track:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 8px;
+}
+
+/* トラック内は横スクロールと干渉しないようフェードのみ */
+.timeline-track .reveal {
+    transform: none;
 }
 
 .timeline-item {
     position: relative;
-    width: 50%;
-    padding: 0 52px 48px 0;
+    flex: 0 0 372px;
+    scroll-snap-align: start;
+    padding-top: 36px;
+    display: flex;
+    flex-direction: column;
 }
 
-/* 偶数カードを引き上げて左右を互い違いに組み合わせ、縦の隙間を圧縮 */
-.timeline-item:nth-child(even) {
-    margin-left: 50%;
-    margin-top: -180px;
-    padding: 0 0 48px 52px;
-}
-
-.timeline-item:last-child {
-    padding-bottom: 0;
-}
-
+/* 時系列を繋ぐドットとライン */
 .timeline-item::before {
     content: '';
     position: absolute;
-    top: 26px;
-    right: -8px;
+    top: 0;
+    left: 38px;
     width: 16px;
     height: 16px;
     border-radius: 50%;
@@ -635,9 +658,58 @@ section {
     z-index: 1;
 }
 
-.timeline-item:nth-child(even)::before {
-    right: auto;
-    left: -8px;
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 46px;
+    width: calc(100% + 28px);
+    height: 2px;
+    background: linear-gradient(to right, rgba(76, 99, 224, .5), rgba(47, 179, 216, .5));
+}
+
+.timeline-item:last-child::after {
+    display: none;
+}
+
+/* 前後送りボタン */
+.tl-btn {
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+    width: 48px;
+    height: 48px;
+    margin-top: -6px;
+    transform: translateY(-50%);
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: var(--surface);
+    color: var(--ink);
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .25s ease, box-shadow .25s ease, opacity .25s ease, color .25s ease;
+}
+
+.tl-btn:hover {
+    transform: translateY(-50%) scale(1.08);
+    box-shadow: var(--shadow-lg);
+    color: var(--accent);
+}
+
+.tl-prev {
+    left: -16px;
+}
+
+.tl-next {
+    right: -16px;
+}
+
+.tl-btn.disabled {
+    opacity: .35;
+    pointer-events: none;
 }
 
 .timeline-card {
@@ -1427,23 +1499,13 @@ section {
         margin: 0 auto;
     }
 
-    /* タイムラインを1列(左ライン)に */
-    .timeline::before {
-        left: 12px;
+    /* モバイルはスワイプ操作なので送りボタンを非表示 */
+    .tl-btn {
+        display: none;
     }
 
-    .timeline-item,
-    .timeline-item:nth-child(even) {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 0;
-        padding: 0 0 44px 44px;
-    }
-
-    .timeline-item::before,
-    .timeline-item:nth-child(even)::before {
-        left: 4px;
-        right: auto;
+    .timeline-item {
+        flex-basis: 306px;
     }
 }
 
